@@ -39,7 +39,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/variables.scss';
+/* @import '~/assets/variables.scss'; */
+
 .header {
   display: flex;
   justify-content: flex-start;

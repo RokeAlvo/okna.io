@@ -1,3 +1,6 @@
+/* eslint-disable prettier/prettier */
+const resolve = require('path').resolve;
+
 export default {
   mode: 'universal',
   /*
@@ -24,7 +27,8 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -42,9 +46,17 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
   ],
-  /*
+  styleResources: {
+    // your settings here
+    sass: [],
+    scss: ['@/assets/scss/variables.scss'],
+    less: [],
+    stylus: []
+   },
+   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
