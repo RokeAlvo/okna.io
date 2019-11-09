@@ -14,6 +14,9 @@ html {
   font-weight: 600;
   font-size: 14px;
   color: $font-main-color;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 *,
