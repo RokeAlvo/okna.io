@@ -1,0 +1,22 @@
+$bg-light: #FDFDFD; 
+$font-main-color: #526570;
+$font-main2-color: #5A5863;
+$font-main2-color-50: rgba($font-main2-color, 0.5);
+$font-logo-color: #60CE78;
+$font-hover-color: #27AE60;
+$button-main-color: #5DBF16;
+$hover-button-main-color: #6CA100;
+$button-text-main-color: #FAFBFB;
+$button-outlined-color: rgba($color: $font-main2-color, $alpha: 0.7);
+$button-secondary-color: #F4F4F5;
+$button-secondary-font-color: rgba($color: $font-main2-color, $alpha: 0.8);
+$hover-button-secondary-color: #60CE78;
+$hover-button-secondary-font-color: $bg-light;
+$h4-color: rgba($color: $font-main2-color, $alpha: 0.9);
+
+$screen-xs: 0;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1800px;

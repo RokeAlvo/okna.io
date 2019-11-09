@@ -1,79 +1,64 @@
 <template>
-  <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two" />
-    <div class="Triangle Triangle--one" />
-    <div class="Triangle Triangle--three" />
-    <div class="Triangle Triangle--four" />
-  </div>
-</template>
+  <svg
+    width="105"
+    height="24"
+    viewBox="0 0 105 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <mask id="path-1-inside-1" fill="white">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M9.50854 20C12.27 20 14.5085 17.7614 14.5085 15C14.5085 12.2386 12.27 10 9.50854 10C6.74712 10 4.50854 12.2386 4.50854 15C4.50854 17.7614 6.74712 20 9.50854 20ZM9.50854 24C14.4791 24 18.5085 19.9706 18.5085 15C18.5085 10.0294 14.4791 6 9.50854 6C4.53798 6 0.508545 10.0294 0.508545 15C0.508545 19.9706 4.53798 24 9.50854 24Z"
+      />
+    </mask>
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M9.50854 20C12.27 20 14.5085 17.7614 14.5085 15C14.5085 12.2386 12.27 10 9.50854 10C6.74712 10 4.50854 12.2386 4.50854 15C4.50854 17.7614 6.74712 20 9.50854 20ZM9.50854 24C14.4791 24 18.5085 19.9706 18.5085 15C18.5085 10.0294 14.4791 6 9.50854 6C4.53798 6 0.508545 10.0294 0.508545 15C0.508545 19.9706 4.53798 24 9.50854 24Z"
+      fill="#526570"
+    />
+    <path
+      d="M10.5085 15C10.5085 15.5523 10.0608 16 9.50854 16V24C14.4791 24 18.5085 19.9706 18.5085 15H10.5085ZM9.50854 14C10.0608 14 10.5085 14.4477 10.5085 15H18.5085C18.5085 10.0294 14.4791 6 9.50854 6V14ZM8.50854 15C8.50854 14.4477 8.95626 14 9.50854 14V6C4.53798 6 0.508545 10.0294 0.508545 15H8.50854ZM9.50854 16C8.95626 16 8.50854 15.5523 8.50854 15H0.508545C0.508545 19.9706 4.53798 24 9.50854 24V16ZM14.5085 15C14.5085 17.7614 12.27 20 9.50854 20V28C16.6882 28 22.5085 22.1797 22.5085 15H14.5085ZM9.50854 10C12.27 10 14.5085 12.2386 14.5085 15H22.5085C22.5085 7.8203 16.6882 2 9.50854 2V10ZM4.50854 15C4.50854 12.2386 6.74712 10 9.50854 10V2C2.32884 2 -3.49146 7.8203 -3.49146 15H4.50854ZM9.50854 20C6.74712 20 4.50854 17.7614 4.50854 15H-3.49146C-3.49146 22.1797 2.32884 28 9.50854 28V20Z"
+      fill="#5A5863"
+      mask="url(#path-1-inside-1)"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M72 15C72 17.7614 69.7614 20 67 20C64.2386 20 62 17.7614 62 15C62 12.2386 64.2386 10 67 10C69.7614 10 72 12.2386 72 15ZM72.0509 7.54985C70.6108 6.57162 68.8721 6 67 6C62.0294 6 58 10.0294 58 15C58 19.9706 62.0294 24 67 24C68.8721 24 70.6108 23.4284 72.0509 22.4502C72.2551 23.3379 73.0502 24 74 24C75.1046 24 76 23.1046 76 22V15V8C76 6.89543 75.1046 6 74 6C73.0502 6 72.2551 6.66205 72.0509 7.54985Z"
+      fill="#526570"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M40 8C40 6.89543 40.8954 6 42 6C42.906 6 43.6713 6.60242 43.9172 7.42855C45.1441 6.6739 46.5371 6.00391 48.0039 6.00391C52 6.00391 56 8.02722 56 13V22C56 23.1046 55.1046 24 54 24C52.8954 24 52 23.1046 52 22V14C52 11.5 50 10 48.0039 10C47 10 45.0749 10.3833 44 12V22C44 23.1046 43.1046 24 42 24C40.8954 24 40 23.1046 40 22V8Z"
+      fill="#526570"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M21 2C21 0.89543 21.8954 0 23 0C24.1046 0 25 0.895431 25 2V13.9982L33.6602 6.47307C34.494 5.74858 35.7572 5.83717 36.4817 6.67095C37.2062 7.50473 37.1176 8.76795 36.2839 9.49245L30.418 14.5895L36.4049 20.5764C37.186 21.3575 37.186 22.6238 36.4049 23.4048C35.6239 24.1859 34.3576 24.1859 33.5765 23.4048L27.3912 17.2195L25 19.2973V22C25 23.1046 24.1046 24 23 24C21.8954 24 21 23.1046 21 22V2Z"
+      fill="#526570"
+    />
+    <rect x="83" y="1" width="2" height="14" rx="1" fill="#4FCF84" />
+    <rect
+      opacity="0.5"
+      x="97.1855"
+      y="12.6"
+      width="2"
+      height="8.20711"
+      rx="1"
+      transform="rotate(-45 97.1855 12.6)"
+      fill="#4FCF84"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M94 13C96.7614 13 99 10.7614 99 8C99 5.23858 96.7614 3 94 3C91.2386 3 89 5.23858 89 8C89 10.7614 91.2386 13 94 13ZM94 15C97.866 15 101 11.866 101 8C101 4.13401 97.866 1 94 1C90.134 1 87 4.13401 87 8C87 11.866 90.134 15 94 15Z"
+      fill="#4FCF84"
+    /></svg
+></template>
 
-<style>
-.VueToNuxtLogo {
-  display: inline-block;
-  animation: turn 2s linear forwards 1s;
-  transform: rotateX(180deg);
-  position: relative;
-  overflow: hidden;
-  height: 180px;
-  width: 245px;
-}
-
-.Triangle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-}
-
-.Triangle--one {
-  border-left: 105px solid transparent;
-  border-right: 105px solid transparent;
-  border-bottom: 180px solid #41b883;
-}
-
-.Triangle--two {
-  top: 30px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 87.5px solid transparent;
-  border-right: 87.5px solid transparent;
-  border-bottom: 150px solid #3b8070;
-}
-
-.Triangle--three {
-  top: 60px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-bottom: 120px solid #35495e;
-}
-
-.Triangle--four {
-  top: 120px;
-  left: 70px;
-  animation: godown 0.5s linear forwards 3s;
-  border-left: 35px solid transparent;
-  border-right: 35px solid transparent;
-  border-bottom: 60px solid #fff;
-}
-
-@keyframes turn {
-  100% {
-    transform: rotateX(0deg);
-  }
-}
-
-@keyframes godown {
-  100% {
-    top: 180px;
-  }
-}
-
-@keyframes goright {
-  100% {
-    left: 70px;
-  }
-}
-</style>
+<style></style>
