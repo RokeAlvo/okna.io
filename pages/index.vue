@@ -1,13 +1,17 @@
 <template lang="pug">
-  Header
+  .page
+    Header
+    Section1(class="page__section1")
 </template>
 
 <script>
+import Section1 from '@/components/home/Section1.vue'
 import Header from '~/components/Header'
 
 export default {
   components: {
-    Header
+    Header,
+    Section1
   }
 }
 </script>

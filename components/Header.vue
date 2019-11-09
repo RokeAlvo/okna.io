@@ -39,9 +39,11 @@ export default {
 </script>
 
 <style lang="scss">
-/* @import '~/assets/variables.scss'; */
-
 .header {
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: flex-start;
   align-items: center;
