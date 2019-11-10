@@ -7,6 +7,7 @@
     Section4
     Section5
     Section6
+    Footer
 </template>
 
 <script>
