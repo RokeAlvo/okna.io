@@ -48,7 +48,7 @@ export default {
             itemsToShow: 1,
             centerMode: true
           },
-          800: {
+          700: {
             itemsToShow: 2
           },
           1000: {

@@ -3,13 +3,6 @@
 </template>
 <script>
 export default {
-  computed: {
-    modsToClass() {
-      return this.mods.split(',').reduce((prev, cur) => {
-        return prev + ' button_' + cur
-      }, '')
-    }
-  },
   props: {
     title: {
       type: String,
@@ -20,6 +13,13 @@ export default {
       default() {
         return ''
       }
+    }
+  },
+  computed: {
+    modsToClass() {
+      return this.mods.split(',').reduce((prev, cur) => {
+        return prev + ' button_' + cur
+      }, '')
     }
   }
 }
