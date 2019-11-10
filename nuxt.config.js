@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
-const resolve = require('path').resolve;
+// FIXME
+// const resolve = require('path').resolve; 
 
 export default {
   mode: 'universal',
