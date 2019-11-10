@@ -145,6 +145,8 @@
 
     li {
       margin-left: 32px;
+      display: flex;
+      align-items: center;
     }
   }
 }
