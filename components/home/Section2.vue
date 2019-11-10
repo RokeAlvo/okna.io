@@ -34,11 +34,28 @@ export default {
 
   @media screen and (min-width: $screen-md) and (max-width: $screen-xl - 1px) {
     display: block;
-    width: calc(100vw - 80px);
+    width: calc(100% - 80px);
     max-height: 620px;
     left: 40px;
     margin: auto;
     height: auto;
+  }
+
+  @media screen and (max-width: $screen-md - 1px) {
+    position: absolute;
+    width: calc(100vw - 40px);
+    left: 20px;
+    top: calc(100vh - 100px);
+    // width: 100%;
+    // left: 0;
+    // top: 0;
+    // position: relative;
+    height: auto;
+    // background: inherit;
+    display: flex;
+    flex-direction: column;
+    background: $bg-light;
+    padding: 42px 42px;
   }
 
   &__slogan {
@@ -53,6 +70,15 @@ export default {
       display: block;
       padding-bottom: 51px;
     }
+
+    @media screen and (max-width: $screen-md - 1px) {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      padding: 0;
+      height: auto;
+      max-height: 500px;
+    }
   }
 
   &__header {
@@ -63,6 +89,13 @@ export default {
     line-height: 44/30 * 1em;
     color: #5a5863;
     margin-bottom: 12/14 * 1rem;
+    @media screen and (max-width: $screen-md - 1px) {
+      font-weight: bold;
+      font-size: 20/14 * 1rem;
+      line-height: 29/20 * 1em;
+      text-align: center;
+      color: rgba(#5a5863, 0.9);
+    }
   }
 
   &__article {
@@ -70,10 +103,19 @@ export default {
     font-style: normal;
     font-weight: normal;
     font-size: 16/14 * 1rem;
-    line-height: 27/16em;
+    line-height: 27/16 * 1em;
     color: rgba($color: #5a5863, $alpha: 0.7);
 
     @media screen and (min-width: $screen-md) and (max-width: $screen-xl - 1px) {
+    }
+    @media screen and (max-width: $screen-md - 1px) {
+      text-align: center;
+      font-size: 1rem;
+      max-width: 245px;
+      margin: auto;
+      margin-bottom: 40px;
+      // width: 100%;
+      // max-width: 100%;
     }
   }
 
@@ -87,6 +129,9 @@ export default {
       border-left: calc(50vw - 40px) solid transparent;
       border-right: calc(50vw - 40px) solid transparent;
       border-top: 26px solid $bg-light;
+    }
+    @media screen and (max-width: $screen-md - 1px) {
+      display: none;
     }
   }
 
@@ -104,8 +149,15 @@ export default {
       top: -130px;
       display: flex;
       justify-content: flex-start;
-
+    }
+    @media screen and (max-width: $screen-md - 1px) {
+      position: static;
       .feedback-form {
+        width: 100%;
+        &__input-wrap,
+        &__policy {
+          display: none;
+        }
       }
     }
   }
@@ -123,6 +175,9 @@ export default {
     @media screen and (min-width: $screen-md) and (max-width: $screen-xl - 1px) {
       top: -550px;
       left: 45vw;
+    }
+    @media screen and (max-width: $screen-md - 1px) {
+      display: none;
     }
   }
 }

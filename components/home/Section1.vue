@@ -32,7 +32,10 @@ export default {
     // background-size: contain;
     background-position: 0 0;
     background-repeat: no-repeat;
-    // background-size: contain;
+  }
+
+  @media screen and (max-width: $screen-md - 1px) {
+    background-size: cover;
   }
 
   &__content {
