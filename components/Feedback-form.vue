@@ -1,19 +1,38 @@
 <template lang="pug">
-  form.feedback-form
+  form(v-on:submit.prevent='onSubmit' ).feedback-form
     .feedback-form__input-wrap
       h3.feedback-form__input-title Введите номер телефона
       .feedback-form__input-phone
         InputText(type='tel', placeholder='+7 (___) ___-__-__')
     .feedback-form__button
-      Button(title='Получить подборку' mods='main-color,raised')
+      Button(title='Получить подборку' mods='main-color,raised' )
     .feedback-form__policy Отправляя форму, вы соглашаетесь с 
       i Политикой конфиденциальности
 </template>
 <script>
+import Inputmask from 'inputmask'
 import InputText from '~/components/InputText'
+
 export default {
   components: {
     InputText
+  },
+  // props: ['formId'],
+  mounted() {
+    const selector = this.$el.querySelector('input[type=tel]')
+    console.log(selector)
+    Inputmask({ mask: '+7(999) 999-99-99' }).mask(selector)
+  },
+  methods: {
+    onSubmit(e) {
+      const URL = ''
+      const phone = e.target[0].value
+      fetch(URL, {
+        method: 'POST',
+        body: JSON.stringify({ phone }),
+        headers: { 'content-type': 'application/json' }
+      })
+    }
   }
 }
 </script>
