@@ -1,7 +1,7 @@
 <template lang="pug">
   .input-text
     .input-text__wrap
-      the-mask(:type='type', :placeholder='placeholder' masked=true mask="+7(###)###-##-##").input-text__input
+      the-mask(:type='type', :placeholder='placeholder' masked=true mask="+7(###)###-##-##" required).input-text__input
 </template>
 <script>
 import { TheMask } from 'vue-the-mask'
