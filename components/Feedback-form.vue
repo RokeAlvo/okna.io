@@ -10,7 +10,6 @@
       i Политикой конфиденциальности
 </template>
 <script>
-import Inputmask from 'inputmask'
 import InputText from '~/components/InputText'
 
 export default {
@@ -21,7 +20,6 @@ export default {
   mounted() {
     const selector = this.$el.querySelector('input[type=tel]')
     console.log(selector)
-    Inputmask({ mask: '+7(999) 999-99-99' }).mask(selector)
   },
   methods: {
     onSubmit(e) {
