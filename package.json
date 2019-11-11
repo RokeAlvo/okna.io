@@ -21,6 +21,8 @@
     "nuxt": "^2.0.0",
     "sass-resources-loader": "^2.0.1",
     "v-mask": "^2.0.2",
+    "vue-js-modal": "^1.3.31",
+    "vue-modaltor": "^1.3.12",
     "vue-the-mask": "^0.11.1"
   },
   "devDependencies": {

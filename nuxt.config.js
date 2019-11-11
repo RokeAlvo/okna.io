@@ -3,7 +3,7 @@
 // const resolve = require('path').resolve; 
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
    ** Headers of the page
    */
@@ -33,7 +33,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/components'],
+  plugins: [
+    '~/plugins/components',
+    '~plugins/vue-js-modal'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -56,11 +59,11 @@ export default {
     scss: ['@/assets/scss/variables.scss'],
     less: [],
     stylus: []
-   },
-   /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
+  },
+  /*
+  ** Axios module configuration
+  ** See https://axios.nuxtjs.org/options
+  */
   axios: {},
   /*
    ** Build configuration
@@ -69,7 +72,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   },
   generate: {
     dir: 'public'
