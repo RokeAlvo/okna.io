@@ -1,12 +1,14 @@
 <template lang="pug">
   .input-text
     .input-text__wrap
-      input(:type='type', :placeholder='placeholder').input-text__input
+      input(:type='type', :placeholder='placeholder' v-mask="'+7(###)###-##-##'").input-text__input
 </template>
 <script>
+import { mask } from 'vue-the-mask'
 export default {
   // eslint-disable-next-line vue/require-prop-types
-  props: ['type', 'placeholder']
+  props: ['type', 'placeholder'],
+  directives: { mask }
 }
 </script>
 <style lang="scss">
