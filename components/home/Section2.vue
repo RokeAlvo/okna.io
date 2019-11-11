@@ -7,7 +7,7 @@
           | и получите персональную подборку подходящих ЖК с планировками и ценами
       .section2__triangle
       .section2__form
-        FeedbackForm
+        FeedbackForm(formId='form1')
       .section2__image
 </template>
 <script>

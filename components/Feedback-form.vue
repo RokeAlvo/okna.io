@@ -1,9 +1,9 @@
 <template lang="pug">
-  form(v-on:submit.prevent='onSubmit' ).feedback-form
+  form(v-on:submit.prevent='onSubmit' :id='formId').feedback-form
     .feedback-form__input-wrap
       h3.feedback-form__input-title Введите номер телефона
       .feedback-form__input-phone
-        InputText(type='tel', placeholder='+7 (___) ___-__-__')
+        InputText(type='tel' placeholder='+7 (___) ___-__-__'  )
     .feedback-form__button
       Button(title='Получить подборку' mods='main-color,raised' )
     .feedback-form__policy Отправляя форму, вы соглашаетесь с 
@@ -16,7 +16,7 @@ export default {
   components: {
     InputText
   },
-  // props: ['formId'],
+  props: ['formId'],
   mounted() {
     const selector = this.$el.querySelector('input[type=tel]')
     console.log(selector)

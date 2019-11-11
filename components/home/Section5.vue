@@ -20,7 +20,7 @@
           <path d="M261.682 121.508C253.492 129.525 244.513 136.382 235.244 143.092" stroke="#60CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         .section5__form
-          FeedbackForm
+          FeedbackForm(formId='form2')
       .section5__logos 
         a(href="#")
           img(src="@/assets/home/images/sber.png")
