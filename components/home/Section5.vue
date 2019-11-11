@@ -57,7 +57,7 @@ export default {
   align-items: center;
   background-image: url('~assets/home/images/bg-image-sc5.jpg');
 
-  @media screen and (min-width: $screen-xs) and (max-width: $screen-xl - 1px) {
+  @media screen and (min-width: $screen-md) and (max-width: $screen-xl - 1px) {
     .feedback-form {
       display: flex;
       flex-direction: row;
@@ -78,6 +78,20 @@ export default {
       &__policy {
         width: 100%;
         text-align: center;
+      }
+    }
+  }
+  @media screen and (min-width: $screen-xs) and (max-width: $screen-md - 1px) {
+    .feedback-form {
+      margin: auto;
+      .input-text__wrap {
+        width: 100%;
+        input {
+          width: 100%;
+        }
+      }
+      .feedback-form__button {
+        max-width: 263px;
       }
     }
   }
@@ -184,8 +198,6 @@ export default {
     }
 
     .feedback-form__button {
-      width: 100%;
-      margin-left: 0;
     }
 
     .feedback-form__input-wrap {

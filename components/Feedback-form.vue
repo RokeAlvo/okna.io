@@ -42,6 +42,11 @@ export default {
   align-items: center;
   width: 280px;
 
+  @media screen and (max-width: $screen-sm) {
+    width: auto;
+    max-width: 280px;
+  }
+
   &__input-title {
     margin-bottom: 26px;
     text-align: center;
