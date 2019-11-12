@@ -11,13 +11,12 @@
     .header__logo
       Logo
     .header__city.nav
-      .nav__item.nav__item_selectable 
-        a(href="#") Новосибирск
+      .nav__item.nav__item_selectable(@click='showCity') Новосибирск
     nav.header__nav
      Nav
     .header__phone
       phone-number(phoneNumber='+7 (383) 895-26-64')
-    modal(name="nav" maxWidth=393 height='100%' adaptive=true reset=true pivotX=0 pivotY='0')
+    modal(name="nav" :maxWidth='393' :height="'100%'" :adaptive='true' :reset='true' :pivotX='0' :pivotY='0')
       .modal-nav
         .modal-nav__column
           .modal-nav__logo
@@ -32,18 +31,22 @@
           <path d="M1 17L9 9.08429L0.999999 0.999968" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M17.0002 17L9.00024 9.08429L17.0002 0.999968" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
+    modal(name='city' adaptive :width='500' :minHeight='354' )
+      ModalCity(activeCity='Новосибирск' :hide='hideCity')
 
 </template>
 <script>
 import Logo from '~/components/Logo'
 import Nav from '~/components/Nav'
 import PhoneNumber from '~/components/PhoneNumber'
+import ModalCity from '~/components/ModalCity'
 
 export default {
   components: {
     Logo,
     Nav,
-    PhoneNumber
+    PhoneNumber,
+    ModalCity
   },
   data() {
     return {
@@ -56,6 +59,12 @@ export default {
     },
     hideNav() {
       this.$modal.hide('nav')
+    },
+    showCity() {
+      this.$modal.show('city')
+    },
+    hideCity() {
+      this.$modal.hide('city')
     }
   }
 }

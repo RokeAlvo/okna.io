@@ -17,10 +17,6 @@ export default {
     InputText
   },
   props: ['formId'],
-  mounted() {
-    const selector = this.$el.querySelector('input[type=tel]')
-    console.log(selector)
-  },
   methods: {
     onSubmit(e) {
       const URL = ''
