@@ -1,6 +1,6 @@
 <template lang="pug">
   .header
-    .header__burger(@click='show')
+    .header__burger(@click='showNav')
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g opacity="0.5">
       <path d="M8.90566 13H31.0943C31.5943 13 32 12.552 32 12C32 11.448 31.5943 11 31.0943 11H8.90566C8.40574 11 8 11.448 8 12C8 12.552 8.40574 13 8.90566 13Z" fill="#5A5863"/>
@@ -14,32 +14,36 @@
       .nav__item.nav__item_selectable 
         a(href="#") Новосибирск
     nav.header__nav
-      ul.nav
-        li.nav__item.nav__item_active
-          a(href="#") Главная
-        li.nav__item 
-          a(href="#") Новостройки
-        li.nav__item 
-          a(href="#") Застройщики
-        li.nav__item 
-          a(href="#") Ипотека
+     Nav
     .header__phone
-      a(href="tel: +73838952664")
-        .phone
-          .phone__icon
-            //- <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            //-   <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5053 19.264L19.0641 20.7055C18.8068 20.9625 18.0533 21.1228 18.0291 21.1228C13.4697 21.1625 9.07969 19.3716 5.85415 16.1458C2.61979 12.9096 0.826797 8.50395 0.874949 3.9292C0.874949 3.9292 1.03996 3.19527 1.29704 2.94064L2.7382 1.49926C3.26558 0.96944 4.27863 0.730015 4.9883 0.967437L5.29146 1.06856C5.99906 1.30576 6.74197 2.08814 6.93747 2.80894L7.66243 5.4697C7.85793 6.19257 7.59424 7.22098 7.06701 7.74836L6.10471 8.71081C7.0495 12.2085 9.79389 14.9534 13.2922 15.9005L14.2541 14.9378C14.7839 14.408 15.812 14.1445 16.5333 14.3397L19.1937 15.0673C19.9146 15.2654 20.6969 16.0036 20.934 16.711L21.0351 17.0185C21.2702 17.7262 21.0326 18.739 20.5053 19.264Z" fill="#5DBF16"/>
-            //- </svg>
-          .phone__number +7 (383) 895-26-64
-    modal(name="hello-world")
-      p hello, world!
+      phone-number(phoneNumber='+7 (383) 895-26-64')
+    modal(name="nav" maxWidth=393 height='100%' adaptive=true reset=true pivotX=0 pivotY='0')
+      .modal-nav
+        .modal-nav__column
+          .modal-nav__logo
+            Logo
+            .nav__item.nav__item_selectable 
+              a(href="#") Новосибирск
+          Nav
+          .modal-nav__phone
+            phone-number(phoneNumber='+7 (383) 895-26-64')
+        .modal-nav__close-aria(@click='hideNav')
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 17L9 9.08429L0.999999 0.999968" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.0002 17L9.00024 9.08429L17.0002 0.999968" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
 </template>
 <script>
 import Logo from '~/components/Logo'
+import Nav from '~/components/Nav'
+import PhoneNumber from '~/components/PhoneNumber'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Nav,
+    PhoneNumber
   },
   data() {
     return {
@@ -47,11 +51,11 @@ export default {
     }
   },
   methods: {
-    show() {
-      this.$modal.show('hello-world')
+    showNav() {
+      this.$modal.show('nav')
     },
-    hide() {
-      this.$modal.hide('hello-world')
+    hideNav() {
+      this.$modal.hide('nav')
     }
   }
 }
@@ -129,7 +133,9 @@ export default {
   align-items: center;
   list-style: none;
   padding: 0;
-
+  @media screen and (max-width: $screen-xl) {
+    flex-direction: column;
+  }
   &__item {
     margin-left: 32px;
 
@@ -170,20 +176,64 @@ export default {
     margin-left: 0;
   }
 }
-.phone {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 
-  &__icon {
-    background-image: url('~assets/images/phone.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 1em;
-    height: 1em;
+.modal-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+  * {
+    margin: 0;
+    align-self: flex-start;
   }
 
-  &__number {
+  &__column {
+    min-width: 270px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 100%;
+    padding: 26px 40px 0 40px;
+    background: radial-gradient(90% 90% at 35.17% 0%, #fdfdfd 0%, #f1f1f1 100%);
+
+    & svg {
+      margin-bottom: 30px;
+    }
+  }
+
+  .nav {
+    padding: 40px;
+    margin-bottom: auto;
+
+    &__item {
+      margin-bottom: 37px;
+    }
+  }
+  &__phone {
+    margin-top: auto;
+    align-self: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__close-aria {
+    background: #2d3038;
+    opacity: 0.7;
+    min-width: 393px - 270px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      margin: auto auto;
+    }
   }
 }
 </style>
