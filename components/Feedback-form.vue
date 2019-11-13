@@ -7,7 +7,8 @@
     .feedback-form__button
       Button(title='Получить подборку' mods='main-color,raised' )
     .feedback-form__policy Отправляя форму, вы соглашаетесь с 
-      i Политикой конфиденциальности
+      i 
+        <router-link to="/oferta">Политикой конфиденциальности</router-link>
 </template>
 <script>
 import InputText from '~/components/InputText'

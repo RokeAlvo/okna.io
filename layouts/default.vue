@@ -29,4 +29,9 @@ html {
 li {
   list-style: none;
 }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 </style>
