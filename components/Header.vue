@@ -83,6 +83,8 @@ export default {
   text-transform: uppercase;
   min-height: 100%;
   box-shadow: 0px 16px 25px rgba(66, 72, 77, 0.05);
+  color: $font-main2-color;
+  font-weight: 500;
 
   &__burger {
     display: none;
