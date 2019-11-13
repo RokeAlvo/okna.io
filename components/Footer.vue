@@ -4,8 +4,7 @@
       .footer__logo
         Logo
       .footer__city.nav
-        .nav__item.nav__item_selectable 
-          a(href="#") Новосибирск
+        .nav__item.nav__item_selectable(@click='showCity') Новосибирск
       nav.footer__nav
         ul.nav
           li.nav__item.nav__item_active
@@ -38,6 +37,18 @@
           </svg>
 
 </template>
+<script>
+export default {
+  methods: {
+    showCity() {
+      this.$modal.show('city')
+    },
+    hideCity() {
+      this.$modal.hide('city')
+    }
+  }
+}
+</script>
 <style lang="scss">
 .footer {
   padding: 20px 20px;

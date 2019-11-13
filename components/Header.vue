@@ -21,8 +21,7 @@
         .modal-nav__column
           .modal-nav__logo
             Logo
-            .nav__item.nav__item_selectable 
-              a(href="#") Новосибирск
+            .nav__item.nav__item_selectable(@click='showCity') Новосибирск
           Nav
           .modal-nav__phone
             phone-number(phoneNumber='+7 (383) 895-26-64')
@@ -61,6 +60,7 @@ export default {
       this.$modal.hide('nav')
     },
     showCity() {
+      this.hideNav()
       this.$modal.show('city')
     },
     hideCity() {
