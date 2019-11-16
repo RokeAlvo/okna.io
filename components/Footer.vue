@@ -21,7 +21,8 @@
             .phone__icon
             .phone__number +7 (383) 895-26-64
     .footer__aside
-      p.footer__policy Политика конфиденциальности
+      router-link(to="/oferta")
+        p.footer__policy Политика конфиденциальности
       ul.footer__social
         li
           <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">

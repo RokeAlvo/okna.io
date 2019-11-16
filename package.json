@@ -12,18 +12,26 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@bazzite/nuxt-optimized-images": "^0.2.1",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/style-resources": "^1.0.0",
     "cleave.js": "^1.5.3",
     "hooper": "^0.3.4",
-    "inputmask": "^4.0.9",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-svgo": "^7.0.0",
+    "jimp": "^0.8.5",
+    "lqip-loader": "^2.2.0",
     "nuxt": "^2.0.0",
+    "responsive-loader": "^1.2.0",
     "sass-resources-loader": "^2.0.1",
+    "sqip-loader": "^0.2.0",
     "v-mask": "^2.0.2",
     "vue-js-modal": "^1.3.31",
-    "vue-modaltor": "^1.3.12",
-    "vue-the-mask": "^0.11.1"
+    "vue-the-mask": "^0.11.1",
+    "webp-loader": "^0.5.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
