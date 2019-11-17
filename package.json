@@ -14,7 +14,7 @@
   "dependencies": {
     "@bazzite/nuxt-optimized-images": "^0.2.1",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/pwa": "^3.0.0-beta.19",
     "@nuxtjs/style-resources": "^1.0.0",
     "cleave.js": "^1.5.3",
     "hooper": "^0.3.4",

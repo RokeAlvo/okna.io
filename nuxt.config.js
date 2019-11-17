@@ -54,6 +54,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@bazzite/nuxt-optimized-images',
+    '@nuxtjs/pwa',
   ],
   styleResources: {
     // your settings here
