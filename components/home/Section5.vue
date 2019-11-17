@@ -23,17 +23,17 @@
           FeedbackForm(formId='form2')
       .section5__logos 
         a(href="#")
-          img(src="@/assets/home/images/sber.png")
+          img(v-lazy="require('../../assets/home/images/sber.png')")
         a(href="#")
-          img(src="@/assets/home/images/vtb.png")
+          img(v-lazy="require('../../assets/home/images/vtb.png')")
         a(href="#")
-          img(src="@/assets/home/images/otkririe.png")
+          img(v-lazy="require('../../assets/home/images/otkririe.png')")
         a(href="#")
-          img(src="@/assets/home/images/gazprom.png")
+          img(v-lazy="require('../../assets/home/images/gazprom.png')")
         a(href="#")
-          img(src="@/assets/home/images/raifaizen.png")
+          img(v-lazy="require('../../assets/home/images/raifaizen.png')")
         a(href="#")
-          img(src="@/assets/home/images/alfa.png")
+          img(v-lazy="require('../../assets/home/images/alfa.png')")
         //- a(href="#") 
         //-   p И еще 10+
 </template>
