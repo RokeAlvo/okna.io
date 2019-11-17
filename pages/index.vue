@@ -34,7 +34,7 @@ export default {
 
 <style>
 .page {
-  /* overflow-x: hidden; */
-  /* max-width: 100vw; */
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 </style>

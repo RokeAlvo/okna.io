@@ -17,6 +17,7 @@ export default {
 <style lang="scss">
 .section1 {
   box-sizing: border-box;
+  background-size: cover;
 
   @media screen and (min-width: $screen-md) {
     background-image: url('~assets/section1/firs-screen.jpg');
