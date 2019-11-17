@@ -7,9 +7,9 @@
 import { TheMask } from 'vue-the-mask'
 
 export default {
+  components: { TheMask },
   // eslint-disable-next-line vue/require-prop-types
-  props: ['type', 'placeholder'],
-  components: { TheMask }
+  props: ['type', 'placeholder']
 }
 </script>
 <style lang="scss">

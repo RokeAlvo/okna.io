@@ -7,6 +7,7 @@
 <script>
 export default {
   name: 'PhoneNumber',
+  // eslint-disable-next-line vue/require-prop-types
   props: ['phoneNumber'],
   computed: {
     phoneText() {

@@ -17,6 +17,7 @@ export default {
   components: {
     InputText
   },
+  // eslint-disable-next-line vue/require-prop-types
   props: ['formId'],
   methods: {
     onSubmit(e) {
