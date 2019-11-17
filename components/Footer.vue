@@ -159,6 +159,16 @@ export default {
       margin-left: 32px;
       display: flex;
       align-items: center;
+
+      @media screen and (min-width: $screen-xs) and (max-width: $screen-xl - 1px) {
+        &:first-child {
+          margin: 0;
+        }
+      }
+    }
+    @media screen and (min-width: $screen-xs) and (max-width: $screen-xl - 1px) {
+      margin: auto;
+      padding: 0;
     }
   }
 }
