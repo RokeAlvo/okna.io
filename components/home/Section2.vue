@@ -56,6 +56,7 @@ export default {
     flex-direction: column;
     background: $bg-light;
     padding: 42px 42px;
+    margin: auto;
   }
 
   &__slogan {
@@ -95,6 +96,7 @@ export default {
       line-height: 29/20 * 1em;
       text-align: center;
       color: rgba(#5a5863, 0.9);
+      margin: auto;
     }
   }
 
