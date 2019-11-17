@@ -35,7 +35,8 @@ export default {
    */
   plugins: [
     '~/plugins/components',
-    '~plugins/vue-js-modal'
+    '~plugins/vue-js-modal',
+    '~plugins/vue-lazyload'
   ],
   /*
    ** Nuxt.js dev-modules

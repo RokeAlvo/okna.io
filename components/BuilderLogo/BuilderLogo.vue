@@ -1,5 +1,6 @@
 <template lang="pug">
-  .builder-logo
+  lazy-component
+    .builder-logo
 </template>
 <style lang="scss">
 .builder-logo {
