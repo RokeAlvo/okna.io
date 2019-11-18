@@ -1,6 +1,6 @@
 <template lang="pug">
   .page
-    Header(city='Новосибирск')
+    Header(:city='city')
     Section1(class="page__section1")
     Section2
     Section3
@@ -28,6 +28,11 @@ export default {
     Section4,
     Section5,
     Section6
+  },
+  computed: {
+    city() {
+      return this.$route.property || 'Новосибирск'
+    }
   }
 }
 </script>
