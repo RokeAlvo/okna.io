@@ -11,7 +11,7 @@
     .header__logo
       Logo
     .header__city.nav
-      .nav__item.nav__item_selectable(@click='showCity') Новосибирск
+      .nav__item.nav__item_selectable(@click='showCity') {{city}}
     nav.header__nav
      Nav
     .header__phone
@@ -46,6 +46,12 @@ export default {
     Nav,
     PhoneNumber,
     ModalCity
+  },
+  props: {
+    city: {
+      type: String,
+      default: ''
+    }
   },
   data() {
     return {

@@ -1,6 +1,6 @@
 <template lang="pug">
   .page
-    Header
+    Header(:city='this.$route.params.city')
     Section1(class="page__section1")
     Section2
     Section3
