@@ -6,10 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt generate",
+    "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "prod": "nuxt build"
   },
   "dependencies": {
     "@bazzite/nuxt-optimized-images": "^0.2.1",
