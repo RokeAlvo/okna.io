@@ -5,10 +5,10 @@
       h2.page__title Все застройщики {{city}}
       .page__input
         InputTextSearch(
-          v-model="InputText" 
+          v-model="inputText" 
           placeholder="Поиск застройщика по названию")
       .page__cards
-        DeveloperCard(v-for="(dev, index) in developers" :key="index" :developer="dev")
+        DeveloperCard(v-for="(dev, index) in filteredDevelopers" :key="index" :developer="dev")
     Footer
 </template>
 <script>
@@ -27,32 +27,46 @@ export default {
     city: {
       type: String,
       default: 'Новосибирск'
-    }
-  },
-  computed: {
-    // FIXME remove fake data
-    developers() {
-      return Array(10)
-        .fill(0)
-        .map((i) => {
-          return {
-            logoUrl: Faker.image.image(),
-            developerName: Faker.company.companyName(),
-            developerDescriptions: [
-              Faker.lorem.words(),
-              Faker.lorem.words(),
-              Faker.lorem.words()
-            ],
-            isReliable: Faker.random.boolean(),
-            developerOffer: 'Квартиры от ' + Faker.commerce.price()
-          }
-        })
+    },
+    developers: {
+      type: Array,
+      default() {
+        return []
+      }
     }
   },
   data() {
     return {
-      InputText: ''
+      inputText: ''
     }
+  },
+  computed: {
+    filteredDevelopers() {
+      const filteredDevelopers = this.developers.filter((dev) => {
+        return ~dev.developerName
+          .toLowerCase()
+          .indexOf(this.inputText.toLowerCase())
+      })
+      return filteredDevelopers
+    }
+  },
+  created() {
+    // FIXME remove fake data
+    this.developers = Array(10)
+      .fill(0)
+      .map((i) => {
+        return {
+          logoUrl: Faker.image.image(),
+          developerName: Faker.company.companyName(),
+          developerDescriptions: [
+            Faker.lorem.words(),
+            Faker.lorem.words(),
+            Faker.lorem.words()
+          ],
+          isReliable: Faker.random.boolean(),
+          developerOffer: 'Квартиры от ' + Faker.commerce.price()
+        }
+      })
   }
 }
 </script>
@@ -68,6 +82,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     background: #f1f1f1;
+    margin-bottom: 60px;
     @media screen and (min-width: $screen-md) {
       padding: 40px;
     }
@@ -99,6 +114,7 @@ export default {
     @media screen and (min-width: $screen-xl) {
       padding: 0;
       max-width: 1200px;
+      width: 100%;
       margin: auto;
       display: flex;
       flex-wrap: wrap;
