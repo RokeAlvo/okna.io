@@ -29,7 +29,7 @@
 <script>
 import { Hooper, Slide } from 'hooper'
 import 'hooper/dist/hooper.css'
-import PromoCard from '@/components/PromoCard'
+import PromoCard from '@/components/home/PromoCard'
 
 export default {
   components: {

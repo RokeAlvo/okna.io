@@ -7,7 +7,7 @@
         Button( title="Перейти в поиск" mods="raised,main-color")
 </template>
 <script>
-import Button from '@/components/Button.vue'
+import Button from '@/components/home/Button.vue'
 export default {
   components: {
     Button

@@ -1,6 +1,6 @@
 <template lang="pug">
   .page
-    Header(:city='this.$route.params.city')
+    Header(:city='city')
     Section1(class="page__section1")
     Section2
     Section3
@@ -28,11 +28,48 @@ export default {
     Section4,
     Section5,
     Section6
+  },
+  computed: {
+    city() {
+      return this.$route.property || 'Новосибирск'
+    }
+    // cities() {
+    //   return JSON.parse(document.querySelector('#cities').dataset.cities)
+    // }
   }
+  // mounted() {
+  //   console.log(this.cities)
+  // }
 }
 </script>
 
-<style>
+<style lang="scss">
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: $font-main-color;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 .page {
   overflow-x: hidden;
   max-width: 100vw;

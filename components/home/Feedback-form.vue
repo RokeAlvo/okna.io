@@ -11,7 +11,7 @@
         <router-link to="/oferta">Политикой конфиденциальности</router-link>
 </template>
 <script>
-import InputText from '~/components/InputText'
+import InputText from '@/components/home/InputText'
 
 export default {
   components: {

@@ -35,10 +35,10 @@
 
 </template>
 <script>
-import Logo from '~/components/Logo'
-import Nav from '~/components/Nav'
-import PhoneNumber from '~/components/PhoneNumber'
-import ModalCity from '~/components/ModalCity'
+import Logo from '@/components/home/Logo'
+import Nav from '@/components/home/Nav'
+import PhoneNumber from '@/components/home/PhoneNumber'
+import ModalCity from '@/components/home/ModalCity'
 
 export default {
   components: {

@@ -11,7 +11,7 @@
       .section2__image
 </template>
 <script>
-import FeedbackForm from '@/components/Feedback-form.vue'
+import FeedbackForm from '@/components/home/Feedback-form.vue'
 
 export default {
   components: {

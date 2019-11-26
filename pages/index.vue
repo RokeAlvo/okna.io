@@ -12,7 +12,7 @@
 
 <script>
 import Section1 from '@/components/home/Section1.vue'
-import Header from '~/components/Header'
+import Header from '@/components/home/Header'
 import Section2 from '@/components/home/Section2.vue'
 import Section3 from '@/components/home/Section3.vue'
 import Section4 from '@/components/home/Section4.vue'

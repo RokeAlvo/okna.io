@@ -50,11 +50,15 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .footer {
   padding: 20px 20px;
   max-width: 1200px;
   margin: auto;
+  @media screen and (min-width: $screen-xl) {
+    padding: 20px 0;
+    width: 1200px;
+  }
 
   &__main {
     display: flex;

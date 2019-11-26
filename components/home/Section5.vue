@@ -38,8 +38,8 @@
         //-   p И еще 10+
 </template>
 <script>
-import Icon from '@/components/Icon'
-import FeedbackForm from '@/components/Feedback-form'
+import Icon from '@/components/home/Icon'
+import FeedbackForm from '@/components/home/Feedback-form'
 
 export default {
   components: {
