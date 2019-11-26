@@ -27,13 +27,13 @@ export default {
     city: {
       type: String,
       default: 'Новосибирск'
-    },
-    developers: {
-      type: Array,
-      default() {
-        return []
-      }
     }
+    // developers: {
+    //   type: Array,
+    //   default() {
+    //     return []
+    //   }
+    // }
   },
   data() {
     return {
@@ -56,7 +56,7 @@ export default {
       .fill(0)
       .map((i) => {
         return {
-          logoUrl: Faker.image.image(),
+          logoUrl: '/developers/images/sibirinvest.png',
           developerName: Faker.company.companyName(),
           developerDescriptions: [
             Faker.lorem.words(),
@@ -119,6 +119,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-bottom: 60px;
     }
   }
 }

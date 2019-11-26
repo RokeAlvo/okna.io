@@ -6,15 +6,7 @@
       .footer__city.nav
         .nav__item.nav__item_selectable(@click='showCity') Новосибирск
       nav.footer__nav
-        ul.nav
-          li.nav__item.nav__item_active
-            a(href="#") Главная
-          li.nav__item 
-            a(href="#") Новостройки
-          li.nav__item 
-            a(href="#") Застройщики
-          li.nav__item 
-            a(href="#") Ипотека
+        Nav
       .footer__phone
         a(href="tel: +73838952664")
           .phone
@@ -39,7 +31,12 @@
 
 </template>
 <script>
+import Nav from '@/components/home/Nav'
+
 export default {
+  components: {
+    Nav
+  },
   methods: {
     showCity() {
       this.$modal.show('city')
@@ -104,15 +101,6 @@ export default {
 
     @media screen and (min-width: $screen-xs) and (max-width: $screen-xl - 1px) {
       margin: 0;
-
-      ul {
-        flex-direction: column;
-      }
-
-      li {
-        margin: 0;
-        margin-bottom: 34px;
-      }
     }
   }
 
